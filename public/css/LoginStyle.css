@@ -1,0 +1,50 @@
+.Login,
+.Register,
+.passwordReset {
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+    margin: 10px;
+    padding: 20px;
+    width: 320px;
+    word-break: break-word;
+}
+
+body {
+    background-image: url("../Images/milkyway.jpg");
+    /*RS: https://freenaturestock.com/billions-of-stars-galaxy/*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #000000;
+}
+
+input[type="password"],
+input[type="text"],
+input[type="email"] {
+    width: 250px;
+}
+
+.password_field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password_field input[type="password"],
+input[type="text"] {
+    padding-right: 30px;
+}
+
+.password_field .fa-eye {
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+    color: #000000;
+}
+
+.password_field .fa-eye-slash {
+    position: absolute;
+    right: 39px;
+    cursor: pointer;
+    color: #000000;
+}

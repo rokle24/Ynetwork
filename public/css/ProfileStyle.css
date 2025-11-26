@@ -1,0 +1,73 @@
+.userprofile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  width: 90%;
+  border: 1px solid #000000;
+  border-radius: 1rem;
+  background: #f2f2f2;
+}
+
+.userprofile .avatar {
+  height: 80px;
+  border-radius: 50%;
+}
+
+.profile-info input {
+  padding: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #020202;
+  border: none;
+  background: transparent;
+}
+
+.profile-info .bio {
+  min-height: 40px;
+  padding: 4px 0;
+  border: none;
+  background: transparent;
+  color: #000;
+  font: inherit;
+  outline: none;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.stats {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  margin: 0 0 .5rem;
+}
+
+.stats dt {
+  font-weight: 600;
+  color: #000000;
+}
+
+.stats dd {
+  margin: 0;
+  color: #000000;
+}
+
+.edit-profile {
+  padding: .4rem .8rem;
+  border-radius: .5rem;
+  border: 1px solid #444;
+  background: #2a2a2a;
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+.edit-profile:hover {
+  background: #3a3a3a;
+}
+
+
+.error-messages {
+ color: red;
+ font-size: 14px;
+ margin-top: 10px;
+}

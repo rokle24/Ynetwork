@@ -1,0 +1,1 @@
+<input {{ $attributes->merge(['class' => 'w3-border w3-border-black w3-round-xlarge w3-white w3-large w3-center', 'style' => '']) }}>

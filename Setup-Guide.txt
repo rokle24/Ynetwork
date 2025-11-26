@@ -1,0 +1,83 @@
+==========================
+🚀 YNETWORK SETUP GUIDE
+(using SQLite)
+==========================
+
+1️⃣ Clone the project
+---------------------
+git clone <your-repo-url> Ynetwork
+cd Ynetwork
+
+2️⃣ Make sure vendor is ignored (don’t commit it)
+------------------------------------------------
+Check your .gitignore file — it should contain:
+/vendor
+
+3️⃣ Copy environment file
+-------------------------
+cp .env.example .env
+# (On Windows PowerShell use: copy .env.example .env)
+
+4️⃣ Install PHP dependencies (this creates /vendor)
+---------------------------------------------------
+composer install
+
+5️⃣ Create SQLite database file
+-------------------------------
+mkdir -p database
+touch database/database.sqlite
+
+6️⃣ Update .env to use SQLite
+-----------------------------
+Open the .env file and replace the database section with this:
+
+DB_CONNECTION=sqlite
+DB_DATABASE=database/database.sqlite
+# DB_HOST=127.0.0.1
+# DB_PORT=3306
+# DB_USERNAME=root
+# DB_PASSWORD=
+
+7️⃣ Generate Laravel app key
+----------------------------
+php artisan key:generate
+
+8️⃣ Run database migrations (and seed if available)
+---------------------------------------------------
+php artisan migrate --seed
+
+9️⃣ Install Node.js dependencies
+--------------------------------
+npm install
+
+🔟 Build frontend assets (for production)
+-----------------------------------------
+npm run build
+# or for development:
+npm run dev
+
+1️⃣1️⃣ Link the storage folder
+-----------------------------
+php artisan storage:link
+
+1️⃣2️⃣ Serve the app
+--------------------
+php artisan serve
+
+Then open in your browser:
+👉 http://localhost:8000
+
+
+==========================
+NOTES
+==========================
+- The /vendor folder is NOT committed to Git.
+  Everyone should run "composer install" to generate it.
+
+- You SHOULD commit these files:
+  - composer.json
+  - composer.lock
+  - .env.example
+
+- SQLite keeps the setup simple — no MySQL needed.
+==========================
